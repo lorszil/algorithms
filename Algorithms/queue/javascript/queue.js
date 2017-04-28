@@ -14,13 +14,12 @@ Queue.prototype.enqueue = function(data) {
     if (!this.first){
         this.first = node;
     } else {
-        n = this.first;
+        var n = this.first;
         while (n.next) {
             n = n.next;
         }
         n.next = node;
     }
-
     this.size += 1;
     return node;
 };
